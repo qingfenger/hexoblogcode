@@ -1,7 +1,7 @@
 ---
 title: git
 date: 2017-09-03 20:33:39
-tags:
+tags: git
 ---
 当前任务，学习中... 公司小范围用法：  服务器上做的：
 ``` bash
@@ -10,6 +10,7 @@ tags:
 3.建立文件夹project.git (名字随便取，这里取project，以后别人git clone时就会生成project文件夹)。
 4.再建立一个文件夹.ssh，用来存入需要访问的成员的 ssh-keygen
 ```
+<!--more-->
 ### 项目成员机上要做的： 
 
 生成本机的ssh-keygen：直接运行 ssh-keygen ，回车，回车。生成的密钥会在window下: “C:\Documents and Settings\userName\.ssh”，有两个文件，复制id_rsa.pub的内容给服务器管理员（邮件或直接QQ吧！）。
@@ -24,7 +25,7 @@ tags:
     5.git remote add origin git@yourServerIP:/opt/git/project.git    (这里是将远程git服务器命名成origin，方便以后使用，名字随便改)
     6.推送到服务器   git push origin master   意思是 : git 推送 到  服务器目录 哪个分支—master 。 至此，完毕。
     ```
-    (-a -m -am/添加 提交 添加提交;git add --all 第一次提交)
+    (-a -m -am/添加 提交 添加提交;git add . 第一次提交除了删除文件全部添加)
 项目成员基本步骤：
 ``` bash
 1.git clone git@serverIP:/opt/git/project.git     完成仓库克隆工作

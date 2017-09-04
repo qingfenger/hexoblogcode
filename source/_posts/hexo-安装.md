@@ -1,12 +1,12 @@
 ---
 title: hexo 安装
 date: 2017-09-03 20:16:29
-tags:
+tags: hexo
 ---
 1.首先安装node npm git
 
 2.安装hexo ：npm install hexo-cli -g
-
+<!--more-->
 3.安装 Hexo 完成后，执行下列命令，初始化并安装依赖，Hexo将会在指定文件夹中新建所需要的文件。
 	``` bash
 	hexo init <folder>
@@ -29,6 +29,7 @@ tags:
 	```
 
 7.然后执行下面命令安装 hexo-deployer-git
+(如果执行hexo d报ERROR Deployer not found: Git执行这一步)
     ``` bash
     npm install hexo-deployer-git --save
     ```
@@ -78,6 +79,10 @@ tags:
 	ssh -T git@github.com
 	只要看到最后一行Hi chenlianjiang! You've successfully authenticated, but GitHub does not provide shell access，说明验证成功了
    ```
+   问题：是发布到github之后路径找不到，在本地一样的路径没有问题
+   解决：hexo配置问题，检查下根目录的_config.yml（注意不是yilia目录下的）的root设置
+         应该是 root: /fullstack.github.io/
+         
 git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 主题：[https://github.com/litten/hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia)
 原文: [http://blog.csdn.net/yaphat/article/details/53187675](http://blog.csdn.net/yaphat/article/details/53187675)
