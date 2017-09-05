@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://qingfenger.github.io/fullstack.github.io/
-root: /fullstack.github.io/
+url: //qingfenger.github.io
+root: /fullstack/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -74,7 +74,7 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 theme: yilia
-# 文章列表配置
+# 文章列表
 jsonContent:
   meta: false
   pages: false
@@ -97,5 +97,5 @@ jsonContent:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:qingfenger/fullstack.github.io.git
+  repository: git@github.com:qingfenger/fullstack.git
   branch: master

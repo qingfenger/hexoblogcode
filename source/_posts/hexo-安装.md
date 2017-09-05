@@ -84,6 +84,9 @@ tags: hexo
          应该是 root: /fullstack.github.io/
          
 git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+更新
+cd themes/yilia
+git pull
 主题：[https://github.com/litten/hexo-theme-yilia](https://github.com/litten/hexo-theme-yilia)
 原文: [http://blog.csdn.net/yaphat/article/details/53187675](http://blog.csdn.net/yaphat/article/details/53187675)
 
