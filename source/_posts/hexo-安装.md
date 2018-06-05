@@ -1,7 +1,8 @@
 ---
 title: hexo 安装
+comments: true
 date: 2017-09-03 20:16:29
-tags: hexo
+tags: Hexo
 ---
 1.首先安装node npm git
 

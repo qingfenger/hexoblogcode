@@ -1,7 +1,7 @@
 ---
 title: git
 date: 2017-09-03 20:33:39
-tags: git
+tags: Git
 ---
 当前任务，学习中... 公司小范围用法：  服务器上做的：
 ``` bash
@@ -52,3 +52,11 @@ git push -u origin dev
 参考文章：http://www.ossxp.com/doc/git/gitolite.html
 
 原文: [http://www.cnblogs.com/trying/archive/2012/06/28/2863758.html](http://www.cnblogs.com/trying/archive/2012/06/28/2863758.html)
+
+```bash
+git本地版本控制
+git init
+添加exclude
+git add .
+git commit -m "first commit"
+```
