@@ -211,3 +211,19 @@ display: inline-block;
 
 **fixd absolute遮罩层点击时永远不获取target即没有点击事件css3：pointer-events:none;**
 border-radius:100px/20px;//横向radius/纵向radius
+
+
+**css3兼容ie9**
+behavior: url(ie-css3.htc);/*兼容ie，加上这句*/
+
+**iconfont 用伪元素添加时为空方块时添加font-family: "iconfont";
+           content默认为16进制所以content中不需要添加X
+           content:attr(data-icon);未验证成功**
+ .com-dialog .el-dialog__title:before{
+    font-family: "iconfont";
+    /*content:"\e639";*/
+    content:attr(data-icon);
+    font-size:16px;
+    margin-right:8px;
+    font-weight:normal;
+  }
