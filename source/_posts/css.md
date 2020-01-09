@@ -35,6 +35,19 @@ CSS3计算calc和vw单位巧妙实现滚动条出现页面不跳动 .wrap-outer�
 	font-size:10vw;//宽度为窗口100%，字体大小为窗口的10%；
 }
 
+多行文本显示省略号
+``` bash
+overflow: hidden; /*自动隐藏文字*/
+text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+white-space: nowrap;/*强制不换行*/
+
+
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+```
+垂直居中方法
 ```bash
 垂直居中/position:absolute;
 .parent {
@@ -52,32 +65,36 @@ CSS3计算calc和vw单位巧妙实现滚动条出现页面不跳动 .wrap-outer�
     background-color: red;
 }
 ```
+垂直居中：虚构一个全高的隐形的 :after 然后让图片和它居中。
+```bash
+.pic_box{
+　　width:300px;
+　　height:300px;
+　　background-color:#beceeb;
+　　text-align:center;
+}
+.pic_box img{
+　　vertical-align:middle;
+}
+.pic_box:after{
+　　display:inline-block;
+　　width:0;
+　　height:100%;
+　　content:"center";
+　　vertical-align:middle;
+　　overflow:hidden;
 
-多行文本显示省略号
-``` bash
-overflow: hidden; /*自动隐藏文字*/
-text-overflow: ellipsis;/*文字隐藏后添加省略号*/
-white-space: nowrap;/*强制不换行*/
-
-
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 3;
-overflow: hidden;
 ```
-垂直居中方法
+
 ```bash
     <div style="border:1px solid #333333;width:130px;height:80px;display:table-cell;vertical-align:middle;">
-      <div>啊啊啊啊啊啊啊啊啊啊</div>
+      <div>垂直居中table-cell</div>
     </div>
     <div style="border:1px solid #333333;width:130px;height:80px;display:flex;align-items:center;">
-      <div>啊啊啊啊啊啊啊啊啊啊</div>
+      <div>垂直居中flex</div>
     </div>
     <div style="border:1px solid #333333;width:130px;height:80px;position:relative;">
-      <div style="position:absolute;top:50%;transform:translateY(-50%);">啊啊啊啊啊啊啊啊啊啊</div>
-    </div>
-    <div style="border:1px solid #333333;width:130px;height:80px;display:table-cell;vertical-align:middle;">
-      <div>啊啊啊啊啊啊啊啊啊啊</div>
+      <div style="position:absolute;top:50%;transform:translateY(-50%);">垂直居中translateY(-50%)</div>
     </div>
 ```
 ---------ie 背景透明文字不透明--------------
