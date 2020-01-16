@@ -64,3 +64,17 @@ import Lesson17 from './class/lesson17';
 console.log(Lesson17.A);
 好处：1.不会因为误操作将一些无关变量导出 2.通过 export default，由第三方引用时无需知道其名称，较为简洁
 ```
+***总结导入命名***
+```
+import defaultcomponent,{a,b,c} from 'XXX';
+eg: import React,{Component} from 'react';
+导入'react' 文件里export的一个默认的组件，将其命名为React以及Component 这个非默认组件
+import defaultcomponent from 'XXX'
+导入XXX文件中的默认组件，命名为defaultcomponent
+import {a} from 'XXX'
+导入XXX文件中的a组件
+import {a as b} from XXX'
+导入XXX文件中的a组件，并将其重命名为b
+import * as a from 'XXX'
+导入XXX文件中的所有组件，并将其命名为a,调用具体组建的方式为a.b、a.c。。。但不包含默认组件
+```
