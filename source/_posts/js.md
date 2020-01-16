@@ -3,6 +3,11 @@ title: js
 date: 2017-09-03 20:33:39
 tags: js
 ---
+***defer与async的区别是：***
+defer要等到整个页面在内存中正常渲染结束（DOM 结构完全生成，以及其他脚本执行完成），才会执行；async一旦下载完，渲染引擎就会中断渲染，执行这个脚本以后，再继续渲染。一句话，defer是“渲染完再执行”，async是“下载完就执行”。
+<script src="e.js" defer></script>
+<script src="e.js" async></script>
+
 昨天日期：
 	function GetDateStr(AddDayCount) { 
 		var dd = new Date(); 

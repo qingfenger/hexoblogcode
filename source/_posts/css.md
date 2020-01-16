@@ -3,50 +3,7 @@ title: css
 date: 2017-09-26 10:42:46
 tags: Css
 ---
-**禁止网页文本选中**
-body{
--webkit-touch-callout: none;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-}
 
-**小于1px的左边框**
-.detail_list  li .row_con>div{
-  height:0.8rem;
-  box-sizing:border-box;
-  background-position: 0 0;
-    background-repeat: repeat-y;
-    background-size: 1px 100%;
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(20%,transparent),color-stop(20%,#dcdcdc),color-stop(80%,#dcdcdc),color-stop(80%,transparent));
-    background-image: -webkit-linear-gradient(top,transparent 20%,#dcdcdc 120%,#dcdcdc 80%,transparent 80%);
-    background-image: linear-gradient(180deg,transparent 20%,#dcdcdc 20%,#dcdcdc 80%,transparent 80%);
-}
----
-<!--more-->
-CSS3计算calc和vw单位巧妙实现滚动条出现页面不跳动 .wrap-outer指的是居中定宽主体的父级
-.wrap-outer {   
-    margin-left: calc(100vw - 100%);   
-}  
-.demo{
-	width:100vw;
-	font-size:10vw;//宽度为窗口100%，字体大小为窗口的10%；
-}
-
-多行文本显示省略号
-``` bash
-overflow: hidden; /*自动隐藏文字*/
-text-overflow: ellipsis;/*文字隐藏后添加省略号*/
-white-space: nowrap;/*强制不换行*/
-
-
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 3;
-overflow: hidden;
-```
 垂直居中方法
 ```bash
 垂直居中/position:absolute;
@@ -195,7 +152,7 @@ textarea::-webkit-input-placeholder {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
         background-color:rgba(204,204,204, 1);  
       }
-
+```
 **css:**
 **文字渐变**
     background-image: -webkit-linear-gradient(left, rgb(255, 118, 92), rgb(255, 35, 179));
@@ -226,13 +183,12 @@ display: inline-block;
     line-height: 0.26rem;
 }
 
-**fixd absolute遮罩层点击时永远不获取target即没有点击事件css3：pointer-events:none;**
+**fixd absolute遮罩层点击时永远不获取target即没有点击事件**
 border-radius:100px/20px;//横向radius/纵向radius
 
 
 **css3兼容ie9**
 behavior: url(ie-css3.htc);/*兼容ie，加上这句*/
-
 **iconfont 用伪元素添加时为空方块时添加font-family: "iconfont";
            content默认为16进制所以content中不需要添加X
            content:attr(data-icon);未验证成功**
