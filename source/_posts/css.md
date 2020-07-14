@@ -4,56 +4,6 @@ date: 2017-09-26 10:42:46
 tags: Css
 ---
 
-垂直居中方法
-```bash
-垂直居中/position:absolute;
-.parent {
-            width:800px;
-            height:500px;
-            border:2px solid #000;
-            display:table-cell;
-            vertical-align:middle;
-            text-align: center;
-        }
-.child {
-    width:200px;
-    height:200px;
-    display:inline-block;
-    background-color: red;
-}
-```
-垂直居中：虚构一个全高的隐形的 :after 然后让图片和它居中。
-```bash
-.pic_box{
-　　width:300px;
-　　height:300px;
-　　background-color:#beceeb;
-　　text-align:center;
-}
-.pic_box img{
-　　vertical-align:middle;
-}
-.pic_box:after{
-　　display:inline-block;
-　　width:0;
-　　height:100%;
-　　content:"center";
-　　vertical-align:middle;
-　　overflow:hidden;
-
-```
-
-```bash
-    <div style="border:1px solid #333333;width:130px;height:80px;display:table-cell;vertical-align:middle;">
-      <div>垂直居中table-cell</div>
-    </div>
-    <div style="border:1px solid #333333;width:130px;height:80px;display:flex;align-items:center;">
-      <div>垂直居中flex</div>
-    </div>
-    <div style="border:1px solid #333333;width:130px;height:80px;position:relative;">
-      <div style="position:absolute;top:50%;transform:translateY(-50%);">垂直居中translateY(-50%)</div>
-    </div>
-```
 ---------ie 背景透明文字不透明--------------
 background:rgba(255, 255, 255, 0.8) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
 filter:Alpha(opacity=80); background:#fff;/*实现IE背景透明*/}
@@ -88,6 +38,7 @@ textarea::-webkit-input-placeholder {
 ```
 
 ----------transiton-----------------
+```bash
 @keyframes mymove
 {
 0%   {top:0px;}
@@ -120,6 +71,7 @@ textarea::-webkit-input-placeholder {
 75%  {top:200px;}
 100% {top:0px;}
 }
+```
 -----------------
 ```bash
 苹果input disabled样式
@@ -129,8 +81,9 @@ textarea::-webkit-input-placeholder {
 	}
 ```	
 
-```bash
+
 *****************************滚动条设置***********************************
+```bash
    .reportLeft::-webkit-scrollbar {  
         width: 8px;/*滚动条高度*/  
         height: 8px; /*滚动条宽度*/ 
@@ -155,11 +108,14 @@ textarea::-webkit-input-placeholder {
 ```
 **css:**
 **文字渐变**
+```bash
     background-image: -webkit-linear-gradient(left, rgb(255, 118, 92), rgb(255, 35, 179));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;//text-fill-color会覆盖color所定义的字体颜色：
+```
 
 **边框小于1px**
+```bash
 .bdr-r:after {
     height: 100%;
     content: '';
@@ -172,22 +128,14 @@ textarea::-webkit-input-placeholder {
     -webkit-transform: scaleX(0.5);
     z-index: 10;
 }
-
-**垂直居中**
-父：div{
-  line-height:0.6rem;
-}
-子：span{
-display: inline-block;
-    vertical-align: middle;
-    line-height: 0.26rem;
-}
+```
 
 **fixd absolute遮罩层点击时永远不获取target即没有点击事件**
 border-radius:100px/20px;//横向radius/纵向radius
 
 
 **css3兼容ie9**
+```bash
 behavior: url(ie-css3.htc);/*兼容ie，加上这句*/
 **iconfont 用伪元素添加时为空方块时添加font-family: "iconfont";
            content默认为16进制所以content中不需要添加X
@@ -200,3 +148,4 @@ behavior: url(ie-css3.htc);/*兼容ie，加上这句*/
     margin-right:8px;
     font-weight:normal;
   }
+  ```
