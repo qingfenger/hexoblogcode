@@ -64,6 +64,7 @@ document.write(json_to_string); //结果：{"name":"姓名","sex":"25"} ，说�
 ```
 ------------------------------------------
 在jquery的ajax函数中，可以传入3种类型的数据
+```bash
 1.文本："uname=alice&mobileIpt=110&birthday=1983-05-12"
 2.json对象：{uanme:'vic',mobileIpt:'110',birthday:'2013-11-11'}
 3.json数组：
@@ -72,6 +73,7 @@ document.write(json_to_string); //结果：{"name":"姓名","sex":"25"} ，说�
     {"name":"mobileIpt","value":"110"},   
     {"name":"birthday","value":"2012-11-11"}
 ]
+```
 ------------------------------------------
 
 //设小号字体

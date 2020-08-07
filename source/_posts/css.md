@@ -1,25 +1,28 @@
 ---
 title: css
-date: 2017-09-26 10:42:46
+date: 2020-07-14 10:42:46
 tags: Css
 ---
 
----------ie 背景透明文字不透明--------------
+**-ie 背景透明文字不透明**
+```bash
 background:rgba(255, 255, 255, 0.8) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
 filter:Alpha(opacity=80); background:#fff;/*实现IE背景透明*/}
 .con p{ position:relative;}
-/*实现IE文字不透明*/
----------------------------------------------
+```
 
+**实现IE文字不透明**
+```bash
 iframe:frameborder="0" scrolling="no" 
 表格边框：table{
 	          border-collapse:collapse;合并separate;分开
 	          border-spacing:10px 50px;//边框空间
 	          empty-cells:hide;隐藏表格中空单元格上的边框和背景
           }
+```
 
+**改变input输入框中placeholder的字体样式**
 ```bash
----------------改变input输入框中placeholder的字体样式：--------------------
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #f00;  
 }
@@ -37,7 +40,7 @@ textarea::-webkit-input-placeholder {
 还原移动端按钮的样式：-webkit-appearance:none;
 ```
 
-----------transiton-----------------
+**transiton**
 ```bash
 @keyframes mymove
 {
@@ -72,17 +75,17 @@ textarea::-webkit-input-placeholder {
 100% {top:0px;}
 }
 ```
------------------
+
+
+**苹果input disabled样式**
 ```bash
-苹果input disabled样式
 	input:disabled {
 		-webkit-text-fill-color: rgba(0, 0, 0, 1);
 		-webkit-opacity: 1;
 	}
 ```	
 
-
-*****************************滚动条设置***********************************
+***滚动条设置**
 ```bash
    .reportLeft::-webkit-scrollbar {  
         width: 8px;/*滚动条高度*/  
@@ -149,3 +152,32 @@ behavior: url(ie-css3.htc);/*兼容ie，加上这句*/
     font-weight:normal;
   }
   ```
+
+  **1rem、1em、1vh、1px各自代表的含义？**
+  ```bash
+  rem
+  rem是全部的长度都相对于根元素<html>元素。通常做法是给html元素设置一个字体大小，然后其他元素的长度单位就为rem。
+
+  em
+  子元素字体大小的em是相对于父元素字体大小
+  元素的width/height/padding/margin用em的话是相对于该元素的font-size
+
+  vw/vh
+  全称是 Viewport Width 和 Viewport Height，视窗的宽度和高度，相当于 屏幕宽度和高度的 1%，不过，处理宽度的时候%单位更合适，处理高度的 话 vh 单位更好。
+     1.vw：1vw等于视口宽度的1%。
+     2.vh：1vh等于视口高度的1%。
+     3.vmin：选取vw和vh中最小的那个。
+     4.vmax：选取vw和vh中最大的那个。
+   vh and vw：相对于视口的高度和宽度，而不是父元素的（CSS百分比是相对于包含它的最近的父元素的高度和宽度）。1vh 等于1/100的视口高度，1vw 等于1/100的视口宽度。
+
+  px
+  px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。
+  一般电脑的分辨率有{1920*1024}等不同的分辨率
+  1920*1024 前者是屏幕宽度总共有1920个像素,后者则是高度为1024个像素
+  ```
+
+  ***calc() 函数用于动态计算长度值。***
+  需要注意的是，运算符前后都需要保留一个空格，例如：width: calc(100% - 10px)；
+  任何长度值都可以使用calc()函数进行计算；
+  calc()函数支持 "+", "-", "*", "/" 运算；
+  calc()函数使用标准的数学运算优先级规则；
